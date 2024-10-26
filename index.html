@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vLuma</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .background-video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+
+        body {
+            margin: 0;
+            overflow-x: hidden;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        header, main {
+            position: relative;
+            z-index: 1;
+            color: white;
+            text-align: center;
+        }
+
+        .slide-up {
+            opacity: 0;
+            transform: translateY(100%);
+            animation: slideUp 2s ease forwards;
+        }
+
+        @keyframes slideUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .logo-container {
+            margin-top: 100px;
+        }
+
+        .logo-container img {
+            width: 200px;
+            height: auto;
+        }
+
+        .welcome-text {
+            font-size: 1.8rem;
+            margin-top: 20px;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 50px;
+            align-items: center;
+        }
+
+        .btn {
+            font-size: 1.2rem;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            background-color: rgb(97, 7, 82);
+            color: #fff;
+            text-decoration: none;
+            transition: background-color 0.3s, transform 0.2s;
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .btn:hover {
+            background-color: #c40ec4;
+            transform: translateY(-3px);
+        }
+
+        .buttons-container {
+            margin-top: 50px;
+        }
+
+        .category-selection {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+
+        .logo-image, .discord-logo {
+            width: 30px;
+            height: auto;
+            margin-right: 10px;
+        }
+
+        .discord-btn-container {
+            display: flex;
+            align-items: center;
+        }
+
+        @media (max-width: 768px) {
+            .logo-container img {
+                width: 150px;
+            }
+            .welcome-text {
+                font-size: 1.5rem;
+            }
+            .btn {
+                font-size: 1rem;
+                padding: 0.8rem 1.5rem;
+            }
+            .category-selection {
+                font-size: 1.2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .buttons {
+                flex-direction: column;
+            }
+            .btn {
+                width: 80%;
+                padding: 0.7rem 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <video class="background-video" autoplay loop muted playsinline>
+        <source src="fond-home.mp4" type="video/mp4">
+        Votre navigateur ne prend pas en charge la vidéo HTML5.
+    </video>
+
+    <header>
+        <div class="logo-container slide-up" style="animation-delay: 0s;">
+            <img src="vLuma-Logo1.png" alt="Logo vLuma">
+        </div>
+        <p class="welcome-text slide-up" style="animation-delay: 1s;">Bienvenue sur le site de vLuma</p>
+    </header>
+
+    <main>
+        <div class="category-selection slide-up" style="animation-delay: 2s;">
+            Sélectionner une catégorie :
+        </div>
+
+        <div class="buttons-container slide-up" style="animation-delay: 3s;">
+            <div class="buttons">
+                <a href="game.html" class="btn">
+                    <img src="games-logo.png" alt="Games Logo" class="logo-image">
+                    Nos Jeux
+                </a>
+                <a href="software.html" class="btn">
+                    <img src="softwares-logo.png" alt="Software Logo" class="logo-image">
+                    Nos Logiciels
+                </a>
+                <div class="discord-btn-container">
+                    <a href="https://discord.gg/feQJXAXBk2" class="btn" style="background-color: #7289DA;">
+                        <img src="discord-logo.png" alt="Discord Logo" class="discord-logo">
+                        Serveur Discord
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

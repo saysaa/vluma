@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>>_ vLuma</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* CSS pour la vidéo de fond */
+        .background-video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+        body {
+            margin: 0;
+            overflow: hidden;
+            min-height: 100vh;
+            overflow-y: auto;
+        }
+        header, main, footer {
+            position: relative;
+            z-index: 1;
+            color: white;
+        }
+        /* Style des liens de développeurs en rouge */
+        .developer-link {
+            color: red;
+            text-decoration: none;
+        }
+        .developer-link:hover {
+            text-decoration: underline;
+        }
+
+        .discord-link {
+            color: #7289DA;
+            text-decoration: none;
+        }
+        .discord-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <video class="background-video" autoplay loop muted playsinline>
+        <source src="fond-index.mp4" type="video/mp4">
+        Votre navigateur ne prend pas en charge la vidéo HTML5.
+    </video>
+
+    <div class="back-button">
+        <a href="index.html">
+            <img src="vLuma-Logo.jpeg" alt="vLuma Logo">
+        </a>
+    </div>
+
+    <header>
+        <h1>vLuma</h1>
+        <p>Team de développeur par <a href="https://guns.lol/saysaa" target="_blank" class="developer-link">Saysaa</a> & <a href="https://guns.lol/hadrix" target="_blank" class="developer-link">HadriX</a></p>
+    </header>
+    <main>
+        <section class="games">
+            <h2>Voici tous nos jeux disponibles :</h2>
+            <ul class="game-list">
+                <li class="game">
+                    <h3>GT1</h3>
+                    <p>>_ Un monde ouvert gratuit avec des graphismes PS1 et une ambiance nocturne urbaine</p>
+                    <a href="https://saysaa.itch.io/gt1" class="btn">En savoir plus</a>
+                </li>
+                <li class="game">
+                    <h3>InJump</h3>
+                    <p>>_ Voici InJump, un jeu de parkour facile à apprendre et pourtant...</p>
+                    <a href="https://saysaa.itch.io/injump" class="btn">En savoir plus</a>
+                </li>
+                <li class="game">
+                    <h3>Lava-Jumper</h3>
+                    <p>>_ Found the 4 Keys to Escape from the Volcano</p>
+                    <a href="https://hadrix.itch.io/lava-jumper" class="btn">En savoir plus</a>
+                </li>
+                <li class="game">
+                    <h3>Reonly</h3>
+                    <p>>_ Voici un jeu comme Only UP mais Gratuit ! Escaladez, Tomber, Sauter...</p>
+                    <a href="https://saysaa.itch.io/reonly" class="btn">En savoir plus</a>
+                </li>
+                <li class="game">
+                    <h3>Hard - Level</h3>
+                    <p>>_ Hard - Level is a Parkour game famous for being impossible</p>
+                    <a href="https://hadrix.itch.io/hard-level" class="btn">En savoir plus</a>
+                </li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024-2025 : vLuma. Tous droits réservés.</p>
+        <p>Un Problème ? <a href="https://discord.gg/feQJXAXBk2" target="_blank" class="discord-link">Rejoignez notre serveur Discord</a>
+    </footer>
+</body>
+</html>
